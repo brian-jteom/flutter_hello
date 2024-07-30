@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'image.dart';
+import 'scroleview_pagination.dart';
 
 void main() {
   runApp(const MyApp());
