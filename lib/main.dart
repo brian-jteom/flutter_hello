@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'align.dart';
+import 'image.dart';
 
 void main() {
   runApp(const MyApp());
