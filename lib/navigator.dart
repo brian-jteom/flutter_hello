@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_start/second_view.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class NavigatorPage extends StatefulWidget {
+  const NavigatorPage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<NavigatorPage> createState() => _NavigatorPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _NavigatorPageState extends State<NavigatorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
