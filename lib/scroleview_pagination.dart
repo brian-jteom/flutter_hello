@@ -30,6 +30,7 @@ class _MyHomePageState extends State<MyHomePage>  {
 
 
   void initLoad() async {
+
     setState(() {
       _isFirstLoadRunning = true;
     });
@@ -57,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage>  {
       });
       _page += 1;
       try {
-        final res = await http.get(Uri.parse("$_url?_page=$_page&_list=$_limit"));
+        final res = await http.get(Uri.parse("$_url?_page=$_page&_limit=$_limit"));
         final List fetchedAlbums = json.decode(res.body);
         if(fetchedAlbums.isNotEmpty) {
           setState(() {

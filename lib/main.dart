@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
-import 'scroleview_pagination.dart';
+import 'package:flutter_start/form_success_page.dart';
+import 'package:flutter_start/provider/album_provider.dart';
+import 'package:provider/provider.dart';
+import './view/album_provider_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => AlbumProvider()),
+        ],
+        child: MyApp(),
+      )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +27,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      routes: {
+        '/': (context) => MyHomePage(),
+        '/success': (context) => SuccessPage()
+      },
+      // home: const MyHomePage(),
     );
   }
 }
